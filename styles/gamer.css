@@ -69,7 +69,12 @@
   text-align: center;
 }
 
-.navbar, .banner-container{
+.navbar, 
+.banner-container, 
+.about-container,
+.img-container,
+.download-container,
+.game-name-container{
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -115,19 +120,169 @@
 .banner .banner-img{
   width: 50%;
 }
+/* about section */
+.about{
+  background-color: #f8f3f6;
+}
+.about-container{
+  justify-content: space-between;
+  align-items: center;
+}
+.about .about-img{
+  width: 60%;
+}
+.about-content{
+  text-align: end;
+}
+.about-title{
+  font-weight: 700;
+  font-size: 3rem;
+  background-image: linear-gradient(#F948B2, #8758F1);
+  color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 10px;
+}
+
+/* play section */
+.play{
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.play-content{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.play-title{
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 20PX;
+}
+.img-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: space-around;
+  
+}
+
+.play-img{
+  
+  width: 100%;
+  height: auto;
+}
+
+/* no-download styles */
+
+.download-content{
+  width: 50%;
+  text-align: end;
+  margin-right: 200px;
+}
+.download-img{
+  width: 50%;
+  position: relative;
+}
+.download-img .big-img{
+  width: 100%;
+  height: 100%;
+  
+}
+.download-img .small-img{
+  width: 45%;
+  position: absolute;
+  left: -22%;
+  bottom: -10%;
+}
+/* game-name styles */
+.game-name{
+  margin-top: 50px;
+  background-color: #fff9f9;
+  padding: 120px 0px;
+}
+.game-name-container{
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.game-content{
+  
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50px;
+  
+}
+.game-title{
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/* footer styles */
+footer{
+  background-color: #0B0223;
+  color: white;
+  padding-bottom: 70px;
+  padding-top: 60px;
+
+}
+.footer-container{
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-brand{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 2.8rem;
+
+}
+.footer-brand h4{
+  margin: 10px 5px;
+}
+.footer-profile{
+  margin-top: 0px;
+}
+.footer-profile,
+.social-icons
+{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.social-icons{
+  margin: 10px 0px;
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+.service{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: #bdb7ca;
+}
+.footer-container p{
+  color: #bdb7ca;;
+}
 
 
 /* responsiv media quary */
 
 /* mobile device */
 @media screen and (max-width: 576px) {
-  header{
+  header,
+  .about,
+  .play
+ 
+  {
     max-width: 300px;
     margin: 0 auto;
   }
 
   .navbar,
-  .nav-item{
+  .nav-item,
+  .about-container,
+  .download-container
+  {
     flex-direction: column;
   }
   .nav-links, .follow{
@@ -167,9 +322,121 @@
     font-size: .6rem;
     padding: 10px 10px;
   }
-  .banner .banner-img{
+  .banner .banner-img,
+  .about .about-img
+  {
     width: 100%;
     
+  }
+  .about{
+    background: none;
+  }
+ 
+  .about-content,
+  .download-content
+  {
+    width: 100%;
+    text-align: center;
+  }
+  .about-title,
+  .play-title{
+    font-size: 1.8rem;
+  }
+  .img-container{
+    grid-template-columns: 1fr;
+  }
+  
+  .download-img{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .game-name{
+    margin-bottom: 50px;
+  }
+  .game-name-container{
+    gap: 2px;
+  }
+  .game-name{
+    background: none;
+    padding: 10px 5px;
+  }
+  .game-content{
+    background: none;
+    width: 30%;
+ 
+  }
+
+  .game-img{
+    width: 30%;
+   
+  }
+  .game-title{
+    margin-left: 5px;
+    font-weight: 500;
+    font-size: .6rem;
+  }
+
+  .footer-container{
+    width: 50%;
+  }
+ 
+  .footer-profile,
+  .social-icons
+  {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .service{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+
+/* medium device */
+@media screen and (min-width: 576px) and (max-width: 992px){
+  .banner-container,
+  .about-container
+  {
+    flex-direction: column-reverse;
+  }
+  .download-container{
+    flex-direction: column;
+  }
+  .banner-content,
+  .banner .banner-img,
+  .about .about-img,
+  .download-content
+  {
+    width: 100%;
+  }
+  .about{
+    background: none;
+  }
+  .banner-content
+  {
+    margin-left: 30px;
+  }
+  .about-content{
+    margin-right: 30px;
+  }
+  .play{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .img-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .download-content{
+    text-align: center;
+  }
+  .download-img{
+    width: 60%;
+    margin: 0 auto;
+    
+  }
+  .footer-container{
+    width: 80%;
   }
   
   

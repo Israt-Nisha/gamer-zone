@@ -170,6 +170,9 @@
   width: 100%;
   height: auto;
 }
+.play-img:hover{
+  
+}
 
 /* no-download styles */
 
@@ -211,6 +214,10 @@
   background-color: white;
   border-radius: 50px;
   
+}
+.game-content:hover{
+  color: #F948B2;
+  border: 2px solid #F948B2;
 }
 .game-title{
   font-weight: 600;
